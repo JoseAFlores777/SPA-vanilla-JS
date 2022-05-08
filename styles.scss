@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,500;0,700;0,900;1,100;1,300;1,600;1,700&display=swap');
+
+$white : rgb(255, 255, 255);
+$black : rgb(0, 0, 0);
+$gray : rgb(131, 131, 131);
+$grayDark : rgb(111, 111, 111);
+$grayLight : rgb(203, 203, 203);
+$primary : rgb(0, 153, 204);
+$secondary : rgb(124, 63, 255);
+$success : rgb(49, 224, 78);
+$danger : rgb(255, 173, 41);
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+body{
+  position: relative;
+  padding-bottom: 80px;
+  min-height: 100vh;
+}
+
+
+#header{
+  width: 100%;
+  background-color: $success;
+  height: 100px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "logo btn";
+  align-items: center;
+  justify-items: center;
+
+  .header-item{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #header-brand{
+    grid-area: logo;
+    font-size: 30px;
+    color: $white;
+    align-self: center;
+    justify-self: left;
+    margin-left: 30px;
+  }
+
+  #header-btn{
+    grid-area: btn;
+    display: flex;
+    align-self: center;
+    justify-self: right; 
+  }
+
+  .header-btn-item{
+    @extend .btn;
+    margin: 0px 10px;
+  }
+
+  .header-btn-item:last-child{
+    margin-right: 20px;
+  }
+
+}
+
+.btn{
+  background-color: $secondary;
+  padding: 20px;
+  color: $white;
+  font-size: 20px;
+  border: none;
+  border-radius: 10px;
+
+  &:hover{
+    cursor: pointer;
+    background-color: $grayLight;
+    color: $secondary;
+  }
+}
+
+
+
+#footer{
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background-color: $grayLight;
+  position: absolute;
+  bottom: 0;
+  height: 50px;
+  width: 100%;
+
+  & h4{
+    align-self: center;
+    text-align: center;
+    vertical-align: middle;
+  }
+}
+
+
+#component2-content{
+  background-color: red;
+  height: 500px;
+}
+
+#component3-content{
+  background-color: rgb(135, 192, 2);
+  height: 500px;
+}
+
+#innerCompt1_btn{
+  background-color: $primary;
+  margin: 300px;
+}
+
